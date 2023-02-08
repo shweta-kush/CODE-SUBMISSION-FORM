@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="banner"> 
+                <h1>Hello, Friend!</h1>
+                <p>Submit your daily codes here!</p>
+            </div>
+            <div class="green-bg">
+                <button type="button">Proceed</button>
+            </div>
+            <form action="save_data.py" class="signup-form" method="post" id="form">
+                <h1>Code-Streak</h1>
+                <p style="font-size: 2rem;">Problem of </p> <p id="date" name="date" style="font-size: 2rem;"> </p>
+                <script>
+                    var today= new Date();
+                    document.getElementById("date").innerHTML=today.toLocaleDateString();
+                </script>
+                <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/?envType=study-plan&id=algorithm-i"> See the Leetcode problem here</a>
+                <p style="font-size: 2rem;">Enter Submission Details here</p>
+                <div class="input-group">
+                    <i class="fas fa-user">
+                        Username <input type="text" placeholder="Enter Your Leetcode UserName" name="name">
+                    </i>
+                </div>
+                <br><br><br><br><br>
+                <div class="input-group">
+                    <i class="fas fa-envelope">
+                        Language 
+                        <select name="lang" id="lang" name="lang">
+                            <option value="select">Select</option>
+                            <option value="c">C</option>
+                            <option value="c++">C++</option>
+                            <option value="java">JAVA</option>
+                            <option value="pyton">Python</option>
+                            <option value="python3">Python3</option>
+                            <option value="c#">C#</option>
+                            <option value="js">JavaScript</option>
+                        </select>
+                    </i>
+                </div><br><br><br>
+                <div class="input-group"><br>
+                    <br>
+                    <h2>ScreenShot:</h2>
+                    <h4>Make sure that your your username and the code are visible in the ScreenShot</h4><br>
+                    <i class="fas fa-camera">
+                        <input class="file" type="file" id="input-file" name="file" > <br><br>
+                    </i>
+                </div>
+
+                <div class="input-group">
+                    <!-- <input type="button" value="SUBMIT" id="btn"> -->
+                    <button type="submit">SUBMIT</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
